@@ -120,4 +120,4 @@ alias vim=nvim
 export NVM_DIR=~/.nvm
 export PATH=~/.local/bin:"$PATH"
 source $(brew --prefix nvm)/nvm.sh
-alias config='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
