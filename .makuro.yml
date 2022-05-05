@@ -1,0 +1,142 @@
+# iPad Horizontal
+# 0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8
+# 9 - 10- 11- 12- 13- 14- 15- 16- 17
+# 18- 19- 20- 21- 22- 23- 24- 25- 26
+# 27- 28- 29- 30- 31- 32- 33- 34- 35
+# 36- 37- 38- 39- 40- 41- 42- 43- 44
+# 45- 46- 47- 48- 49- 50- 51- 52- 53
+# 54- 55- 56- 57- 58- 59- 60- 61- 62
+
+# Example Command
+# 0:
+#   - type: key
+#     key: tab
+#     modifier: command
+#   - type: string
+#     value: test
+#   - type: script
+#     command: "ls -la"
+
+44:
+- type: key
+  key: backspace
+
+# Numpad
+5:
+- type: key
+  key: "+"
+14:
+- type: key
+  key: "-"
+23:
+- type: key
+  key: "/"
+32:
+- type: key
+  key: "*"
+
+6:
+- type: key
+  key: numpad_7
+7:
+- type: key
+  key: numpad_8
+8:
+- type: key
+  key: numpad_9
+15:
+- type: key
+  key: numpad_4
+16:
+- type: key
+  key: numpad_5
+17:
+- type: key
+  key: numpad_6
+24:
+- type: key
+  key: numpad_1
+25:
+- type: key
+  key: numpad_2
+26:
+- type: key
+  key: numpad_3
+33:
+- type: key
+  key: numpad_0
+34:
+- type: key
+  key: numpad_0
+35:
+- type: key
+  key: enter
+
+# Media Controls
+45:
+- type: key
+  key: audio_vol_down
+46:
+- type: key
+  key: audio_mute
+47:
+- type: key
+  key: audio_vol_up
+48:
+- type: key
+  key: audio_play
+49:
+- type: key
+  key: audio_next
+
+# Window Splitting
+54:
+- type: key
+  key: d
+  modifier:
+  - control
+  - shift
+55:
+- type: key
+  key: e
+  modifier:
+  - control
+  - shift
+56:
+- type: key
+  key: f
+  modifier:
+  - control
+  - shift
+57:
+- type: key
+  key: t
+  modifier:
+  - control
+  - shift
+58:
+- type: key
+  key: g
+  modifier:
+  - control
+  - shift
+59:
+- type: key
+  key: enter
+  modifier:
+  - control
+  - alt
+
+# Arrows
+52:
+- type: key
+  key: up
+60:
+- type: key
+  key: left
+61:
+- type: key
+  key: down
+62:
+- type: key
+  key: right
