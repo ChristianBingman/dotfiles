@@ -117,7 +117,9 @@ gdvim() {
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.10)
 alias vim=nvim
+alias mail=neomutt
 export NVM_DIR=~/.nvm
 export PATH=~/.local/bin:"$PATH"
 source $(brew --prefix nvm)/nvm.sh
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
