@@ -4,12 +4,12 @@ set realname = "Christian Bingman"
 set from = "cbingm2@uic.edu"
 set sendmail = "msmtp -a cbingm2@uic.edu"
 alias me cbingm2 <cbingm2@uic.edu>
-set folder = "/Users/christianbingman/.local/share/mail/cbingm2@uic.edu"
-set header_cache = /Users/christianbingman/.cache/mutt-wizard/cbingm2@uic.edu/headers
-set message_cachedir = /Users/christianbingman/.cache/mutt-wizard/cbingm2@uic.edu/bodies
+set folder = "$HOME/.local/share/mail/cbingm2@uic.edu"
+set header_cache = $HOME/.cache/mutt-wizard/cbingm2@uic.edu/headers
+set message_cachedir = $HOME/.cache/mutt-wizard/cbingm2@uic.edu/bodies
 set mbox_type = Maildir
 set hostname = "uic.edu"
-source /usr/local/share/mutt-wizard/switch.muttrc
+source $HOME/.config/mutt/switch.muttrc
 set spoolfile = +INBOX
 set postponed = +Drafts
 set trash = +Trash

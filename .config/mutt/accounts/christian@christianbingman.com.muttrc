@@ -4,12 +4,12 @@ set realname = "Christian Bingman"
 set from = "christian@christianbingman.com"
 set sendmail = "msmtp -a christian@christianbingman.com"
 alias me christian <christian@christianbingman.com>
-set folder = "/Users/christianbingman/.local/share/mail/christian@christianbingman.com"
-set header_cache = /Users/christianbingman/.cache/mutt-wizard/christian@christianbingman.com/headers
-set message_cachedir = /Users/christianbingman/.cache/mutt-wizard/christian@christianbingman.com/bodies
+set folder = "$HOME/.local/share/mail/christian@christianbingman.com"
+set header_cache = $HOMe/.cache/mutt-wizard/christian@christianbingman.com/headers
+set message_cachedir = $HOME/.cache/mutt-wizard/christian@christianbingman.com/bodies
 set mbox_type = Maildir
 set hostname = "christianbingman.com"
-source /usr/local/share/mutt-wizard/switch.muttrc
+source $HOME/.config/mutt/switch.muttrc
 set spoolfile = +INBOX
 set postponed = +Drafts
 set trash = +Trash
