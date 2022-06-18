@@ -122,6 +122,7 @@ alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
 alias cp='/usr/bin/env rsync -r -P'
 alias tt='/usr/bin/env tt -theme liquid-carbon-transparent'
+export NVM_DIR=~/.nvm
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
