@@ -115,13 +115,13 @@ gdvim() {
     nvim --listen gdhost .
 }
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.10)
 alias vim=nvim
 alias mail=neomutt
-export NVM_DIR=~/.nvm
 export PATH=~/.local/bin:"$PATH"
-source $(brew --prefix nvm)/nvm.sh
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
 alias cp='/usr/bin/env rsync -r -P'
 alias tt='/usr/bin/env tt -theme liquid-carbon-transparent'
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
