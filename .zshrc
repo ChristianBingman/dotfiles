@@ -129,13 +129,3 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# on OS X with GPGTools, comment out the next line:
-eval $(gpg-agent --daemon 2> /dev/null)
-GPG_TTY=$(tty)
-export GPG_TTY
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-    . "${HOME}/.gpg-agent-info"
-    export GPG_AGENT_INFO
-    export SSH_AUTH_SOCK
-fi
