@@ -50,6 +50,7 @@ nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gb :Git branch -m
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gmm :Git merge remotes/origin/master<cr>
+nnoremap <leader>gca :Git commit --amend
 nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 nmap <c-j> <c-w>j
