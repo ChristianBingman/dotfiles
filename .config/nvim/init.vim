@@ -29,13 +29,12 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Theme stuff
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
-Plug 'tomasiser/vim-code-dark'
 
 
 call plug#end()
-colorscheme codedark
-let g:airline_theme = "codedark"
+let g:airline_theme = "owo"
 " :autocmd BufWritePre * :Prettier
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -55,3 +54,7 @@ nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
+
+
+" Custom theme "
+source ~/.config/nvim/sw-background.vim
