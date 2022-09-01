@@ -88,12 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR=nvim
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -120,7 +115,7 @@ alias mail=neomutt
 export PATH=~/.local/bin:"$PATH"
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
-alias cp='/usr/bin/env rsync -r -P'
+alias cp='/usr/bin/env rsync -avzP'
 alias tt='/usr/bin/env tt -theme liquid-carbon-transparent'
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
