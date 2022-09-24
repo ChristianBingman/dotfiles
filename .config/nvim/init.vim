@@ -27,6 +27,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Theme stuff
 Plug 'vim-airline/vim-airline-themes'
@@ -58,3 +59,7 @@ nmap <c-k> <c-w>k
 
 " Custom theme "
 source ~/.config/nvim/sw-background.vim
+
+" Markdown Preview Settings "
+let g:mkdp_browser = '/bin/true'
+let g:mkdp_port = '3001'
