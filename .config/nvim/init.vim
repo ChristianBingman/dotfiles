@@ -4,13 +4,14 @@ set nocompatible
 set showmatch
 set ignorecase
 set hlsearch
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set relativenumber
 set wildmode=longest,list
+set hid
 filetype plugin indent on
 syntax on
 filetype plugin on
@@ -51,11 +52,17 @@ nnoremap <leader>gb :Git branch -m
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gmm :Git merge remotes/origin/master<cr>
 nnoremap <leader>gca :Git commit --amend
-nmap <c-h> <c-w>h
-nmap <c-l> <c-w>l
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
+nnoremap <leader>gp :Git push -u origin HEAD<cr>
 
+" Buffer Maps "
+nmap <leader>h <c-w>h
+nmap <leader>l <c-w>l
+nmap <leader>j <c-w>j
+nmap <leader>k <c-w>k
+nmap <leader>vs :vsp<cr>
+nmap <leader>hs :split<cr>
+nmap <leader>bo <c-w>_ <c-w><bar>
+nmap <leader>be <c-w>=
 
 " Custom theme "
 source ~/.config/nvim/sw-background.vim
@@ -63,3 +70,12 @@ source ~/.config/nvim/sw-background.vim
 " Markdown Preview Settings "
 let g:mkdp_browser = '/bin/true'
 let g:mkdp_port = '3001'
+
+" Terminal Mode Maps "
+nmap <leader>vt :vsp<cr>:term<cr>
+nmap <leader>ht :split<cr>:term<cr>
+tnoremap <Esc> <C-\><C-n>
+
+" Terminal Mode Commands "
+autocmd TermOpen * setlocal nonumber norelativenumber
+autocmd TermOpen * startinsert
