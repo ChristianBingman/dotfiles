@@ -111,6 +111,7 @@ gdvim() {
 }
 
 alias vim=nvim
+alias tree='/usr/bin/env git log --graph --pretty=oneline --abbrev-commit'
 alias mail=neomutt
 export PATH=~/.local/bin:"$PATH"
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
