@@ -115,6 +115,7 @@ alias tree='/usr/bin/env git log --graph --pretty=oneline --abbrev-commit'
 alias mail=neomutt
 alias gca='git commit -a --amend'
 alias gc='git commit -a'
+alias find=gfind
 export PATH=~/.local/bin:"$PATH"
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
