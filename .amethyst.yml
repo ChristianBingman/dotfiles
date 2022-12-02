@@ -1,0 +1,20 @@
+layouts:
+  - fullscreen
+  - tall
+  - column
+
+relaunch-amethyst:
+  mod: mod2
+  key: r
+
+shrink-main:
+  mod: mod2
+  key: l
+
+expand-main:
+  mod: mod2
+  key: h
+
+window-margins: true
+window-margin-size: 10
+use-canary-build: true

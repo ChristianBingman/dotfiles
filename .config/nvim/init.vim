@@ -65,7 +65,7 @@ nmap <leader>bo <c-w>_ <c-w><bar>
 nmap <leader>be <c-w>=
 
 " Custom theme "
-source ~/.config/nvim/sw-background.vim
+" source ~/.config/nvim/sw-background.vim
 
 " Markdown Preview Settings "
 let g:mkdp_browser = '/bin/true'
