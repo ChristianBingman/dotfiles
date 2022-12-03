@@ -38,6 +38,7 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 let g:airline_theme = "minimalist"
 colorscheme tokyonight-night
+hi Normal guibg=NONE ctermbg=NONE
 " :autocmd BufWritePre * :Prettier
 nnoremap <SPACE> <Nop>
 let mapleader = " "
