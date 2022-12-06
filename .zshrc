@@ -121,6 +121,7 @@ alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
 alias cp='/usr/bin/env rsync -avzP'
 alias tt='/usr/bin/env tt -theme liquid-carbon-transparent'
+alias aoc='ADVENT_OF_CODE_SESSION=$(pass aocsessiontoken) /opt/homebrew/bin/aoc'
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
