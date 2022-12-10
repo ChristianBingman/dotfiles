@@ -169,4 +169,6 @@ fi
 
 # Disable annoyingly huge prompts, kinda insecure tho
 export DIRENV_LOG_FORMAT=""
+# Linux locale warning
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 eval "$(direnv hook zsh)"
