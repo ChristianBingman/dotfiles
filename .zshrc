@@ -167,4 +167,6 @@ if [ -n "$HOME" ] && [ -n "$USER" ]; then
     unset NIX_LINK
 fi
 
+# Disable annoyingly huge prompts, kinda insecure tho
+export DIRENV_LOG_FORMAT=""
 eval "$(direnv hook zsh)"
