@@ -166,3 +166,5 @@ if [ -n "$HOME" ] && [ -n "$USER" ]; then
     export PATH="$NIX_LINK/bin:$PATH"
     unset NIX_LINK
 fi
+
+eval "$(direnv hook zsh)"
