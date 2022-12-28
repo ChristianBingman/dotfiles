@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("i", "ii", "<ESC>")
 
 --[[
 " Buffer Maps "
@@ -13,3 +14,4 @@ vim.keymap.set("n", "<leader>vs", ":vsp<cr>")
 vim.keymap.set("n", "<leader>hs", ":split<cr>")
 vim.keymap.set("n", "<leader>bo", "<c-w>_ <c-w><bar>")
 vim.keymap.set("n", "<leader>be", "<c-w>=")
+

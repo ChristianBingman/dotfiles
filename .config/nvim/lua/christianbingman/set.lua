@@ -1,7 +1,6 @@
 --[[
 set splitright
-set hidden
-set nocompatible
+set hidden set nocompatible
 set showmatch
 set ignorecase
 set hlsearch
@@ -30,5 +29,6 @@ vim.opt.relativenumber = true
 vim.opt.hid = true
 vim.opt.ttyfast = true
 vim.opt.wildmode = "longest,list"
+vim.opt.mouse = ""
 
 vim.cmd([[ syntax enable ]])
