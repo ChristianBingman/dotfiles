@@ -31,4 +31,7 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'VonHeikemen/lsp-zero.nvim'
 
+-- Extras
+Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+
 vim.call('plug#end')
