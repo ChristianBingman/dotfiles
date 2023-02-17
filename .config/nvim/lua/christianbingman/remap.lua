@@ -14,4 +14,4 @@ vim.keymap.set("n", "<leader>vs", ":vsp<cr>")
 vim.keymap.set("n", "<leader>hs", ":split<cr>")
 vim.keymap.set("n", "<leader>bo", "<c-w>_ <c-w><bar>")
 vim.keymap.set("n", "<leader>be", "<c-w>=")
-
+vim.keymap.set("n", "<leader>pic", ":!kitten icat ~/Background.jpg")

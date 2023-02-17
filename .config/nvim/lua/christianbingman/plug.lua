@@ -33,5 +33,6 @@ Plug 'VonHeikemen/lsp-zero.nvim'
 
 -- Extras
 Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+Plug 'edluffy/hologram.nvim'
 
 vim.call('plug#end')
