@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/bin:/usr/local/bin:~/.local/bin:/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -105,29 +105,17 @@ export EDITOR=nvim
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-gdvim() {
-    nvim --listen gdhost .
-}
-
 alias vim=nvim
 alias tree='/usr/bin/env git log --graph --pretty=oneline --abbrev-commit'
-alias mail=neomutt
 alias gca='git commit -a --amend'
 alias gc='git commit -a'
-alias find=gfind
-export PATH=~/.local/bin:"$PATH"
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-export PATH="/opt/homebrew/opt/cyrus-sasl/sbin:$PATH"
 alias cp='/usr/bin/env rsync -avzP'
-alias tt='/usr/bin/env tt -theme liquid-carbon-transparent'
-alias aoc='ADVENT_OF_CODE_SESSION=$(pass aocsessiontoken) /opt/homebrew/bin/aoc'
+alias s="kitty +kitten ssh"
+
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Nix config setup
 if [ -n "$HOME" ] && [ -n "$USER" ]; then
