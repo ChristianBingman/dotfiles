@@ -18,7 +18,11 @@ fi
 
 FINDPASS="$(find $HOME/.password-store -type f | grep "$1" | sed 's/.*\.password-store\///'| sed 's/\.gpg$//')"
 
-echo "$1"
+if [ -z $FINDPASS ]
+then
+  echo "No Password Found!"
+  exit 0
+fi
 
 if [ -z "$2" ]; then
   if pass -c $FINDPASS 2> /dev/null
