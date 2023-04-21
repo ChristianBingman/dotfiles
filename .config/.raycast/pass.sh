@@ -16,7 +16,7 @@ if [ $STATUS -ne 0 ]; then
   killall gpg-agent
 fi
 
-FINDPASS="$(find $HOME/.password-store -type f | grep "$1" | sed 's/.*\.password-store\///'| sed 's/\.gpg$//')"
+FINDPASS="$(find $HOME/.password-store -type f | grep "$1" | sed 's/.*\.password-store\///'| sed 's/\.gpg$//' | head -n1)"
 
 if [ -z $FINDPASS ]
 then

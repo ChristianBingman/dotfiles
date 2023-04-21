@@ -3,6 +3,7 @@
 let
   pkgs = [
     nixpkgs.ripgrep
+    nixpkgs.openssh
   ];
  
 in
