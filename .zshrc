@@ -1,3 +1,7 @@
+if [ -f /etc/zsh/zshrc ]; then
+    source /etc/zsh/zshrc
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -113,10 +117,6 @@ alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias cp='/usr/bin/env rsync -avzP'
 alias s="kitty +kitten ssh"
 
-if [ -f ~/.zshrc.local ]; then
-    source ~/.zshrc.local
-fi
-
 # Nix config setup
 if [ -n "$HOME" ] && [ -n "$USER" ]; then
 
@@ -159,3 +159,7 @@ export DIRENV_LOG_FORMAT=""
 # Linux locale warning
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 eval "$(direnv hook zsh)"
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
