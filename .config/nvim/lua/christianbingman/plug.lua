@@ -7,6 +7,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug('folke/tokyonight.nvim', { branch = 'main' })
+Plug 'mbbill/undotree'
 
 -- Plug Theme stuff
 Plug 'vim-airline/vim-airline-themes'

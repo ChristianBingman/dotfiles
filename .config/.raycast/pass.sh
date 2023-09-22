@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Required parameters:
 # @raycast.schemaVersion 1
@@ -10,13 +10,13 @@
 # @raycast.argument1 { "type": "text", "placeholder": "Path" }
 # @raycast.argument2 { "type": "text", "placeholder": "Copy OTP", "optional": true }
 
-PASS="$(gpg -d $(find $HOME/.password-store -type f | head -n1))"
-STATUS=$?
-if [ $STATUS -ne 0 ]; then
-  killall gpg-agent
-fi
+#PASS="$($HOME/.nix-profile/bin/gpg -d $(find $HOME/.password-store -type f | head -n1))"
+#STATUS=$?
+#if [ $STATUS -ne 0 ]; then
+#  killall gpg-agent
+#fi
 
-FINDPASS="$(find $HOME/.password-store -type f | grep "$1" | sed 's/.*\.password-store\///'| sed 's/\.gpg$//' | head -n1)"
+FINDPASS="$(find $HOME/.password-store -type f | grep "$1" | awk '{ print length(), $0 | "sort -n" }' | sed 's/.*\.password-store\///'| sed 's/\.gpg$//' | head -n1)"
 
 if [ -z $FINDPASS ]
 then
@@ -25,14 +25,14 @@ then
 fi
 
 if [ -z "$2" ]; then
-  if pass -c $FINDPASS 2> /dev/null
+  if $HOME/.nix-profile/bin/pass -c $FINDPASS 2> /dev/null
   then
     echo "$FINDPASS Copied"
   else
     echo "Unable to find: $FINDPASS"
   fi
 else
-  if pass otp -c $FINDPASS 2> /dev/null
+  if $HOME/.nix-profile/bin/pass otp -c $FINDPASS 2> /dev/null
   then
     echo "$FINDPASS OTP Copied"
   else

@@ -160,6 +160,15 @@ export DIRENV_LOG_FORMAT=""
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 eval "$(direnv hook zsh)"
 
+eval $(gpg-agent --daemon 2> /dev/null)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+GPG_TTY=$(tty)
+export GPG_TTY
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+    . "${HOME}/.gpg-agent-info"
+    export GPG_AGENT_INFO
+fi
+
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi

@@ -1,12 +1,5 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'sumneko_lua',
-  'rust_analyzer',
-  'jedi_language_server',
-})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
