@@ -4,6 +4,7 @@ let
   pkgs = [
     nixpkgs.ripgrep
     nixpkgs.openssh
+    nixpkgs.coreutils-full
   ];
  
 in
