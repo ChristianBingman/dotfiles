@@ -117,9 +117,9 @@ focus-cw:
 #  key: p
 
 # Focus the next screen in the list going clockwise.
-#focus-screen-cw:
-#  mod: mod1
-#  key: n
+focus-screen-cw:
+  mod: mod2
+  key: y
 
 # Move the currently focused window onto the next screen in the list going counter-clockwise.
 swap-screen-ccw:
