@@ -1,7 +1,8 @@
 { pkgs ? import <nixpkgs> {  } }:
 
 let
-  localpkgs = (import ./local-packages.nix pkgs).buildInputs;
+  localpkgs = if builtins.pathExists ./local-packages.nix then 
+    (import ./local-packages.nix pkgs).buildInputs else [];
 in
   pkgs.stdenv.mkDerivation {
     name = "env";
