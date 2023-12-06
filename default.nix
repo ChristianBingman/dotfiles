@@ -1,14 +1,12 @@
-{ nixpkgs ? import <nixpkgs> {  } }:
+{ pkgs ? import <nixpkgs> {  } }:
 
 let
-  pkgs = [
-    nixpkgs.ripgrep
-    nixpkgs.openssh
-    nixpkgs.coreutils-full
-  ];
- 
+  localpkgs = (import ./local-packages.nix pkgs).buildInputs;
 in
-  nixpkgs.stdenv.mkDerivation {
+  pkgs.stdenv.mkDerivation {
     name = "env";
-    buildInputs = pkgs;
+    buildInputs = (with pkgs; [
+      ripgrep
+      openssh
+    ]) ++ localpkgs;
   }
